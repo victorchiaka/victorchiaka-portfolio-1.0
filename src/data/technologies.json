@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Frontend",
+    "icon": "Frontend",
+    "technologies": [
+      "Bootstrap, TailwindCSS",
+      "Typescript",
+      "React x NextJs",
+      "Vue x NuxtJs"
+    ]
+  },
+  {
+    "title": "Backend",
+    "icon": "Backend",
+    "technologies": [
+      "Python (Flask, FastApi, Django)",
+      "C# (.NET)",
+      "Java (Spring)",
+      "Typescript (Node & ExpressJs)"
+    ]
+  },
+  {
+    "title": "Software",
+    "icon": "Software",
+    "technologies": ["Python", "Lua"]
+  }
+]
