@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Landing from "./views/Landing.vue";
-import About from "./views/About.vue";
+import Insight from "./views/Insight.vue";
 import Navbar from "./components/Navbar.vue";
 import ThemeSwitcher from "./components/ThemeSwitcher.vue";
 import { useStorage } from "@vueuse/core";
@@ -69,23 +69,53 @@ onMounted(() => {
 
 <template>
   <main class="main">
-    <Navbar id="navbar" :classes="'hidden'" :theme="theme"  :handleToggleTheme="handleToggleTheme" />
+    <Navbar id="navbar" :classes="'hidden'" :theme="theme" :handleToggleTheme="handleToggleTheme" />
     <div class="contents">
       <Landing />
-      <About />
+      <Insight />
     </div>
   </main>
-  <div class="fixed bottom-0 right-0 w-full h-fit">
-    <div id="theme-switcher" class="container w-[95%] mx-auto relative">
+  <div class="fixed bottom-0 right-0 w-full h-fit z-[3]">
+    <div id="theme-switcher" class="container w-[95%] md:w-[90%] mx-auto relative">
       <ThemeSwitcher @toggle-theme="handleToggleTheme" :theme="theme"
         :classes="'opacity-0 translate-y-[100%] animate-slide-down-to-bottom absolute right-4 bottom-4 p-3'" />
     </div>
   </div>
+  <div class="glass-display" />
 </template>
 
 <style scoped lang="scss">
 .main {
-  @apply min-h-[100dvh] bg-gradient-to-bl from-baby-blue to-blue-green dark:from-blue-grotto dark:to-navy-blue text-gray-600 dark:text-white;
+  @apply min-h-[100dvh] bg-gradient-to-bl from-baby-blue to-blue-green dark:from-blue-grotto dark:to-navy-blue;
+}
+
+.glass-display {
+
+  &::after,
+  &::before {
+    content: "";
+    @apply rounded-full absolute min-h-[50vh];
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+  }
+
+  @apply after:bg-white/20 before:bg-cyan-400/25;
+  @apply dark:after:bg-white/10 dark:before:bg-baby-blue/5;
+  @apply after:w-[60vw] after:animate-pulse before:animate-rotate before:w-[20vh];
+
+  @apply fixed inset-0 flex items-center justify-center blur-2xl;
+  animation: slide-x 10s alternate linear infinite;
+}
+
+@keyframes slide-x {
+  from {
+    transform: translateX(-70%);
+  }
+
+  to {
+    transform: translateX(70%);
+  }
 }
 
 .contents {

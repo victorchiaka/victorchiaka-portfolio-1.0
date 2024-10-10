@@ -10,15 +10,6 @@ export default {
         "blue-grotto": "#189AB4",
         "navy-blue": "#05445E",
       },
-      boxShadow: {
-        "thin-border": "0 0 0 0.7px rgba(128, 128, 128, 0.9)",
-        "thin-border-white": "0 0 0 0.7px rgba(255, 255, 255, 0.9)",
-        "thin-border-light": "0 0 0 0.7px rgba(128, 128, 128, 0.1)",
-        "thin-border-bottom": "0 0.7px 0 rgba(128, 128, 128, 0.9)",
-        "thin-border-top": "0 -0.7px 0 rgba(128, 128, 128, 0.9)",
-        "thin-border-x":
-          "-0.7px 0 0 rgba(128, 128, 128, 0.2), 0.7px 0 0 rgba(128, 128, 128, 0.2)",
-      },
       keyframes: {
         blink: {
           "0%, 50%": { opacity: "1" },

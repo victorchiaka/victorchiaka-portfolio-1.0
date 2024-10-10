@@ -6,3 +6,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  @apply dark:text-white;
+}
+
+.text-xxs {
+  font-size: 0.5rem;
+}
