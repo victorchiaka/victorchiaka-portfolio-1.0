@@ -15,6 +15,10 @@ export default {
           "0%, 50%": { opacity: "1" },
           "50.1%, 100%": { opacity: "0" },
         },
+        flip: {
+          "0%": { transform: "rotateY(0deg)" },
+          "100%": { transform: "rotateY(360deg)" },
+        },
         grow: {
           "0%": {
             transform: "scale(1.4)",
@@ -121,6 +125,7 @@ export default {
         "slide-down-to-bottom":
           "slide-down-to-bottom 0.8s ease-out 2.3s forwards, rotate 1s 3.3s forwards",
         rotate: "rotate 0.7s ease-in-out forwards",
+        flip: "flip 1s ease-in-out infinite",
       },
     },
     fontFamily: {
