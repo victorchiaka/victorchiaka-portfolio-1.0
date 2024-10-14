@@ -1,12 +1,12 @@
 [
   {
     "position": "Software engineer @ Litestack",
-    "src": "./src/assets/images/litestack.png",
+    "src": "/images/litestack.png",
     "alt": "Litestack"
   },
   {
     "position": "Software engineer @ Innovar Ideas",
-    "src": "./src/assets/images/innovar.png",
+    "src": "/images/innovar.png",
     "alt": "Innovar Idea"
   }
 ]

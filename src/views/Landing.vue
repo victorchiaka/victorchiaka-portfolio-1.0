@@ -59,13 +59,6 @@ const type = () => {
   setTimeout(type, isDeleting.value ? deleteSpeed : typeSpeed.value);
 };
 
-const scrollToWorks = () => {
-  const myWorks = document.querySelector("#my-works");
-  if (myWorks) {
-    myWorks.scrollIntoView({ behavior: "smooth" });
-  }
-};
-
 onMounted(() => {
   setTimeout(() => {
     trigger();
@@ -74,9 +67,9 @@ onMounted(() => {
 });
 </script>
 <template>
-  <section class="about">
-    <div id="about" class="about-me">
-      <img src="../assets/images/chiaka-logo.svg" id="main-logo" alt="Victor Chiaka's logo" class="about-me-image" />
+  <section id="about" class="about">
+    <div class="about-me">
+      <img src="/images/chiaka-logo.svg" id="main-logo" alt="Victor Chiaka's logo" class="about-me-image" />
       <div class="about-content text-center lg:text-left">
         <h2
           class="h-[1.5rem] text-sm md:text-base font-bold dark:text-blue-green text-navy-blue uppercase md:-mb-2 md:ml-0.5 font-ubuntu-mono opacity-0 animate-slide-in-right">

@@ -3,18 +3,21 @@ import { AkLinkChain, ThGithub } from "@kalimahapps/vue-icons";
 import NaturePc from "../components/icons/NaturePc.vue";
 import Programming from "../components/icons/Programming.vue";
 import Accordion from "../components/Accordion.vue";
-import ContactDetailCard from "../components/icons/ContactDetailCard.vue";
+import ContactDetailCard from "../components/ContactDetailCard.vue";
 import ProjectCard from "../components/ProjectCard.vue";
 import WorkCard from "../components/WorkCard.vue";
-import technologies from "../data/technologies.json";
+import technologyData from "../data/technologies.json";
 import projects from "../data/projects.json";
 import works from "../data/works.json";
 import contactDetails from "../data/contact-details.json";
+import { Category } from "../types";
+
+const technologies: Category[] = technologyData;
 </script>
 
 <template>
   <section class="insights">
-    <div class="my-technologies">
+    <div class="my-technologies" id="stacks">
       <div class="w-[90%] md:w-[40%] mx-auto">
         <NaturePc />
       </div>
@@ -29,7 +32,7 @@ import contactDetails from "../data/contact-details.json";
         </div>
       </div>
     </div>
-    <div class="works-and-projects">
+    <div class="works-and-projects" id="works-and-projects">
       <div class="projects">
         <h2 class="font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
           Projects
@@ -75,7 +78,7 @@ import contactDetails from "../data/contact-details.json";
     </div>
   </section>
   <section class="contact-section">
-    <div class="contact-me">
+    <div class="contact-me" id="contact-me">
       <div class="w-[90%] md:w-[40%] mx-auto">
         <Programming />
         <p class="text-center text-sm md:text-base my-1 md:my-2 font-asap">
@@ -93,7 +96,7 @@ import contactDetails from "../data/contact-details.json";
               <ContactDetailCard :contactDetail="contactDetail" />
             </div>
           </div>
-          <a class="font-comfortaa text-xxs my-4" src="https://victorchiaka-link-tree.netlify.app">Or use my link tree
+          <a class="font-comfortaa text-xxs my-4" href="https://victorchiaka-link-tree.netlify.app">Or use my link tree
             <AkLinkChain class="ml-1 text-gray-600 dark:text-gray-600/10 w-3 aspect-auto inline" />
           </a>
         </div>

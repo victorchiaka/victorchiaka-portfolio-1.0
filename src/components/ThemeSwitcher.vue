@@ -15,13 +15,13 @@ const props = defineProps<ThemeSwitherProps>();
   >
     <img
       v-if="theme == 'light'"
-      src="../assets/images/moon.svg"
+      src="/images/moon.svg"
       alt="Moon Icon"
       class="w-3 h-3 theme-switcher"
     />
     <img
       v-else
-      src="../assets/images/sun.svg"
+      src="/images/sun.svg"
       alt="Sun Icon"
       class="w-3 h-3 theme-switcher"
     />

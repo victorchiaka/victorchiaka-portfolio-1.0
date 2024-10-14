@@ -3,24 +3,24 @@
     "socialMediaName": "LinkedIn",
     "link": "https://www.linkedin.com/in/victor-chiaka-43a540254",
     "socialMediaIcon": "LinkedIn",
-    "hoverColor": ""
+    "hoverColor": "#3b82f666"
   },
   {
     "socialMediaName": "Twitter",
     "link": "https://x.com/VictorChiaka3",
     "socialMediaIcon": "Twitter",
-    "hoverColor": ""
+    "hoverColor": "#00000066"
   },
   {
     "socialMediaName": "Instagram",
     "link": "https://www.instagram.com/chiakavictor205",
     "socialMediaIcon": "Instagram",
-    "hoverColor": ""
+    "hoverColor": "#ef444466"
   },
   {
     "socialMediaName": "Github",
     "link": "https://github.com/victorchiaka",
     "socialMediaIcon": "Github",
-    "hoverColor": ""
+    "hoverColor": "#11182766"
   }
 ]

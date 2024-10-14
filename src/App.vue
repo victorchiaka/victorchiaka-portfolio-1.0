@@ -2,9 +2,10 @@
 import Landing from "./views/Landing.vue";
 import Insight from "./views/Insight.vue";
 import Navbar from "./components/Navbar.vue";
+import Footer from "./components/Footer.vue";
 import ThemeSwitcher from "./components/ThemeSwitcher.vue";
 import { useStorage } from "@vueuse/core";
-import { onMounted, ref } from "vue";
+import { onMounted } from "vue";
 
 const theme = useStorage("THEME_MODE", "light");
 
@@ -23,14 +24,17 @@ const toggleTheme = () => {
 const observeLogoTouch = () => {
   const mainLogo = document.querySelector("#main-logo");
   const themeSwicher = document.querySelector("#theme-switcher");
-  const navbar = document.querySelector("#navbar");
+  const navbars = document.querySelectorAll("#navbar");
 
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        navbar.classList.toggle("hidden", entry.isIntersecting);
-        navbar.classList.toggle("flex", !entry.isIntersecting);
-        themeSwicher.classList.toggle("hidden", !entry.isIntersecting);
+        navbars.forEach((navbar) => {
+          navbar.classList.toggle("hidden", entry.isIntersecting);
+          navbar.classList.toggle("flex", !entry.isIntersecting);
+        });
+
+        themeSwicher?.classList.toggle("hidden", !entry.isIntersecting);
       });
     },
     {
@@ -38,14 +42,14 @@ const observeLogoTouch = () => {
     },
   );
 
-  observer.observe(mainLogo);
+  observer.observe(mainLogo as Element);
 };
 
 const animate = () => {
   const themeSwitchers = document.querySelectorAll(".theme-switcher");
 
-  themeSwitchers.forEach((themeSwitcher) => {
-    themeSwitcher.classList.add("animate-rotate");
+  themeSwitchers?.forEach((themeSwitcher) => {
+    themeSwitcher?.classList.add("animate-rotate");
   });
 };
 
@@ -69,16 +73,28 @@ onMounted(() => {
 
 <template>
   <main class="main">
-    <Navbar id="navbar" :classes="'hidden'" :theme="theme" :handleToggleTheme="handleToggleTheme" />
+    <Navbar
+      id="navbar"
+      :classes="'hidden'"
+      :theme="theme"
+      :handleToggleTheme="handleToggleTheme"
+    />
     <div class="contents">
       <Landing />
       <Insight />
     </div>
+    <Footer />
   </main>
   <div class="fixed bottom-0 right-0 w-full h-fit z-[3]">
-    <div id="theme-switcher" class="container w-[95%] md:w-[90%] mx-auto relative">
-      <ThemeSwitcher @toggle-theme="handleToggleTheme" :theme="theme"
-        :classes="'opacity-0 translate-y-[100%] animate-slide-down-to-bottom absolute right-4 bottom-4 p-3'" />
+    <div
+      id="theme-switcher"
+      class="container w-[95%] md:w-[90%] mx-auto relative"
+    >
+      <ThemeSwitcher
+        @toggle-theme="handleToggleTheme"
+        :theme="theme"
+        :classes="'opacity-0 translate-y-[100%] animate-slide-down-to-bottom absolute right-4 bottom-4 p-3'"
+      />
     </div>
   </div>
   <div class="glass-display" />
@@ -90,7 +106,6 @@ onMounted(() => {
 }
 
 .glass-display {
-
   &::after,
   &::before {
     content: "";

@@ -6,13 +6,7 @@ import {
   BsInstagram,
 } from "@kalimahapps/vue-icons";
 import { computed } from "vue";
-
-type ContactDetail = {
-  link: string;
-  hoverColor: string;
-  socialMediaIcon: string;
-  socialMediaName: string;
-};
+import { ContactDetail } from "../types";
 
 interface ContactDetailsProps {
   contactDetail: ContactDetail;
@@ -28,11 +22,11 @@ const iconsMap = {
 const props = defineProps<ContactDetailsProps>();
 
 const iconComponent = computed(() => {
-  return iconsMap[props.contactDetail.socialMediaIcon];
+  return iconsMap[props.contactDetail.socialMediaIcon as unknown as keyof typeof iconsMap];
 });
 </script>
 <template>
-  <a class="contact-details-card">
+  <a class="contact-details-card" :href="contactDetail.link">
     <div class="flex w-fit flex-col gap-1 items-center">
       <component :is="iconComponent" v-if="iconComponent" class="lg:w-6 lg:h-6" />
       <h4 class="text-sm md:text-base">{{ contactDetail.socialMediaName }}</h4>
@@ -46,5 +40,6 @@ const iconComponent = computed(() => {
 
 .contact-details-card:hover {
   background-color: v-bind(props.contactDetail.hoverColor);
+  @apply transition-[background-color] duration-1000;
 }
 </style>

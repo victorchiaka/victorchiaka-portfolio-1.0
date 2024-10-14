@@ -6,14 +6,7 @@ import {
   SiTailwindcss,
 } from "@kalimahapps/vue-icons";
 import { computed } from "vue";
-
-type Project = {
-  name: string;
-  type: string;
-  description: string;
-  githubLink: string;
-  icon: string;
-};
+import { Project } from "../types";
 
 interface ProjectProps {
   project: Project;
@@ -29,14 +22,18 @@ const iconsMap = {
 const props = defineProps<ProjectProps>();
 
 const iconComponent = computed(() => {
-  return iconsMap[props.project.icon];
+  return iconsMap[props.project.icon as unknown as keyof typeof iconsMap];
 });
 </script>
 <template>
   <a class="project-card group" :href="project.githubLink">
     <div class="project-card-top">
       {{ project.name }}
-      <component :is="iconComponent" class="w-[1.2rem] h-[1.2rem] group-hover:animate-flip" v-if="iconComponent" />
+      <component
+        :is="iconComponent"
+        class="w-[1.2rem] h-[1.2rem] group-hover:animate-flip"
+        v-if="iconComponent"
+      />
     </div>
     <div class="project-card-bottom">
       <p class="description">{{ project.description }}</p>
