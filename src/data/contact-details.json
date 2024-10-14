@@ -1,0 +1,26 @@
+[
+  {
+    "socialMediaName": "LinkedIn",
+    "link": "https://www.linkedin.com/in/victor-chiaka-43a540254",
+    "socialMediaIcon": "LinkedIn",
+    "hoverColor": ""
+  },
+  {
+    "socialMediaName": "Twitter",
+    "link": "https://x.com/VictorChiaka3",
+    "socialMediaIcon": "Twitter",
+    "hoverColor": ""
+  },
+  {
+    "socialMediaName": "Instagram",
+    "link": "https://www.instagram.com/chiakavictor205",
+    "socialMediaIcon": "Instagram",
+    "hoverColor": ""
+  },
+  {
+    "socialMediaName": "Github",
+    "link": "https://github.com/victorchiaka",
+    "socialMediaIcon": "Github",
+    "hoverColor": ""
+  }
+]

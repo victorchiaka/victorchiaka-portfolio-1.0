@@ -1,12 +1,15 @@
 <script setup lang="ts">
-import { MdFileDownload } from "@kalimahapps/vue-icons";
+import { AkLinkChain, ThGithub } from "@kalimahapps/vue-icons";
 import NaturePc from "../components/icons/NaturePc.vue";
+import Programming from "../components/icons/Programming.vue";
 import Accordion from "../components/Accordion.vue";
+import ContactDetailCard from "../components/icons/ContactDetailCard.vue";
 import ProjectCard from "../components/ProjectCard.vue";
 import WorkCard from "../components/WorkCard.vue";
 import technologies from "../data/technologies.json";
 import projects from "../data/projects.json";
 import works from "../data/works.json";
+import contactDetails from "../data/contact-details.json";
 </script>
 
 <template>
@@ -28,7 +31,7 @@ import works from "../data/works.json";
     </div>
     <div class="works-and-projects">
       <div class="projects">
-        <h2 class="text-left md:text-center font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
+        <h2 class="font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
           Projects
         </h2>
         <div v-for="(project, key) in projects" :key="key" class="w-full flex py-1">
@@ -41,6 +44,13 @@ import works from "../data/works.json";
             <ProjectCard :project="project" />
           </div>
         </div>
+        <footer class="w-full">
+          <a href="https://github.com/victorchiaka?tab=repositories"
+            class="font-bold font-comfortaa text-sm my-2 md:my-3 flex items-center gap-2">
+            More on Github
+            <ThGithub />
+          </a>
+        </footer>
       </div>
       <div class="works">
         <h2 class="text-left md:text-center font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
@@ -59,8 +69,33 @@ import works from "../data/works.json";
                 <WorkCard :workCard="work" />
               </div>
             </div>
-
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contact-section">
+    <div class="contact-me">
+      <div class="w-[90%] md:w-[40%] mx-auto">
+        <Programming />
+        <p class="text-center text-sm md:text-base my-1 md:my-2 font-asap">
+          I have the skills you need for your projects.
+        </p>
+      </div>
+      <div class="w-[98%] md:w-[40%] max-w-[40rem] self-center">
+        <div class="w-full mx-auto">
+          <h2 class="text-left font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
+            Contact me
+            <AkLinkChain class="ml-1 text-gray-600 dark:text-gray-600/10 w-4 md:w-5 aspect-auto inline" />
+          </h2>
+          <div class="grid grid-cols-2 place-items-center gap-3">
+            <div v-for="(contactDetail, key) in contactDetails" class="w-full" :key="key">
+              <ContactDetailCard :contactDetail="contactDetail" />
+            </div>
+          </div>
+          <a class="font-comfortaa text-xxs my-4" src="https://victorchiaka-link-tree.netlify.app">Or use my link tree
+            <AkLinkChain class="ml-1 text-gray-600 dark:text-gray-600/10 w-3 aspect-auto inline" />
+          </a>
         </div>
       </div>
     </div>
@@ -109,9 +144,13 @@ import works from "../data/works.json";
       scrollbar-color: transparent transparent;
     }
   }
+}
 
-  /*.contact-me {
-    @apply gap-5 flex flex-col md:flex-row items-center lg:gap-x-14;
-  } */
+.contact-section {
+  @apply my-8 flex items-center justify-center p-2 w-[95%] mx-auto;
+
+  .contact-me {
+    @apply w-full gap-5 flex flex-col md:flex-row items-center lg:gap-x-14;
+  }
 }
 </style>
