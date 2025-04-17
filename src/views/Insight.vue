@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { AkLinkChain, ThGithub } from "@kalimahapps/vue-icons";
 import NaturePc from "../components/icons/NaturePc.vue";
 import Programming from "../components/icons/Programming.vue";
 import Accordion from "../components/Accordion.vue";
@@ -23,10 +22,16 @@ const technologies: Category[] = technologyData;
       </div>
       <div class="w-full md:w-[50%] self-start">
         <div class="w-full mx-auto">
-          <h2 class="text-left md:text-center font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
+          <h2
+            class="text-left md:text-center font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3"
+          >
             My Technologies
           </h2>
-          <div v-for="(category, key) in technologies" class="py-2 w-full" :key="key">
+          <div
+            v-for="(category, key) in technologies"
+            class="py-2 w-full"
+            :key="key"
+          >
             <Accordion :category="category" />
           </div>
         </div>
@@ -34,10 +39,16 @@ const technologies: Category[] = technologyData;
     </div>
     <div class="works-and-projects" id="works-and-projects">
       <div class="projects">
-        <h2 class="font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
+        <h2
+          class="font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3"
+        >
           Projects
         </h2>
-        <div v-for="(project, key) in projects" :key="key" class="w-full flex py-1">
+        <div
+          v-for="(project, key) in projects"
+          :key="key"
+          class="w-full flex py-1"
+        >
           <div class="w-[2px] gap-y-2 flex flex-col items-center mr-3">
             <div class="bg-gray-400/30 h-[10%] w-[2px] rounded-md"></div>
             <div class="bg-gray-400/30 h-[6px] w-[6px] rounded-full"></div>
@@ -48,26 +59,40 @@ const technologies: Category[] = technologyData;
           </div>
         </div>
         <footer class="w-full">
-          <a href="https://github.com/victorchiaka?tab=repositories"
-            class="font-bold font-comfortaa text-sm my-2 md:my-3 flex items-center gap-2">
+          <a
+            href="https://github.com/victorchiaka?tab=repositories"
+            class="font-bold font-comfortaa text-sm my-2 md:my-3 flex items-center gap-2"
+          >
             More on Github
             <ThGithub />
           </a>
         </footer>
       </div>
       <div class="works">
-        <h2 class="text-left md:text-center font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
+        <h2
+          class="text-left md:text-center font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3"
+        >
           My Works
         </h2>
-        <div class="w-full flex flex-col items-center gap-y-3 h-fit md:h-full overflow-y-scroll works-scroll">
-          <div class="w-full flex md:block" v-for="(work, key) in works" :key="key">
-            <div class="w-[6px] gap-y-2 flex flex-col items-center mr-3 md:hidden">
+        <div
+          class="w-full flex flex-col items-center gap-y-3 h-fit md:h-full overflow-y-scroll works-scroll"
+        >
+          <div
+            class="w-full flex md:block"
+            v-for="(work, key) in works"
+            :key="key"
+          >
+            <div
+              class="w-[6px] gap-y-2 flex flex-col items-center mr-3 md:hidden"
+            >
               <div class="bg-gray-400/30 h-[10%] w-[2px] rounded-md"></div>
               <div class="bg-gray-400/30 h-[6px] w-[6px] rounded-full"></div>
               <div class="bg-gray-400/30 h-[80%] w-[2px] rounded-md"></div>
             </div>
             <div class="w-[95%] md:w-full">
-              <div class="text-xxs w-[100%] py-2 h-56 rounded-md bg-gray-500/20">
+              <div
+                class="text-xxs w-[100%] py-2 h-56 rounded-md bg-gray-500/20"
+              >
                 <p class="text-center pb-1">{{ work.position }}</p>
                 <WorkCard :workCard="work" />
               </div>
@@ -87,17 +112,30 @@ const technologies: Category[] = technologyData;
       </div>
       <div class="w-[98%] md:w-[40%] max-w-[40rem] self-center">
         <div class="w-full mx-auto">
-          <h2 class="text-left font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
+          <h2
+            class="text-left font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3"
+          >
             Contact me
-            <AkLinkChain class="ml-1 text-gray-600 dark:text-gray-600/10 w-4 md:w-5 aspect-auto inline" />
+            <AkLinkChain
+              class="ml-1 text-gray-600 dark:text-gray-600/10 w-4 md:w-5 aspect-auto inline"
+            />
           </h2>
           <div class="grid grid-cols-2 place-items-center gap-3">
-            <div v-for="(contactDetail, key) in contactDetails" class="w-full" :key="key">
+            <div
+              v-for="(contactDetail, key) in contactDetails"
+              class="w-full"
+              :key="key"
+            >
               <ContactDetailCard :contactDetail="contactDetail" />
             </div>
           </div>
-          <a class="font-comfortaa text-xxs my-4" href="https://victorchiaka-link-tree.netlify.app">Or use my link tree
-            <AkLinkChain class="ml-1 text-gray-600 dark:text-gray-600/10 w-3 aspect-auto inline" />
+          <a
+            class="font-comfortaa text-xxs my-4"
+            href="https://victorchiaka-link-tree.netlify.app"
+            >Or use my link tree
+            <AkLinkChain
+              class="ml-1 text-gray-600 dark:text-gray-600/10 w-3 aspect-auto inline"
+            />
           </a>
         </div>
       </div>

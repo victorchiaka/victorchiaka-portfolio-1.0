@@ -84,9 +84,9 @@ onMounted(() => {
           high-performance apps, scalable, systems & enterprise backend services. I
           transform ideas into efficient digital solutions. Let’s collaborate!!!.
         </p>
-        <button class="download-resume group opacity-0 animate-slide-in-bottom">
+        <a class="download-resume group opacity-0 animate-slide-in-bottom" href="/victorchiaka-cv.pdf" download>
           <MdFileDownload class="group-hover:animate-bounce" /> My resume
-        </button>
+        </a>
       </div>
     </div>
   </section>
