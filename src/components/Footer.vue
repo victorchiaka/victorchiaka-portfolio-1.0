@@ -9,7 +9,6 @@ const year = new Date().getFullYear();
 </template>
 <style scoped lang="scss">
 footer {
-  @apply w-full h-fit md:w-[90%] rounded-t-2xl md:rounded-t-lg grid place-items-center gap-y-1 py-2 mx-auto font-comfortaa bg-navy-blue/10 dark:bg-white/10;
+  @apply w-full h-fit md:w-[90%] rounded-t-2xl md:rounded-t-lg grid place-items-center gap-y-1 py-6 mx-auto font-comfortaa bg-navy-blue/10 dark:bg-white/10;
 }
-
 </style>

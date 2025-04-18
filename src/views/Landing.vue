@@ -84,7 +84,7 @@ onMounted(() => {
           high-performance apps, scalable, systems & enterprise backend services. I
           transform ideas into efficient digital solutions. Let’s collaborate!!!.
         </p>
-        <a class="download-resume group opacity-0 animate-slide-in-bottom" href="/victorchiaka-cv.pdf" download>
+        <a class="download-resume group opacity-0 animate-slide-in-bottom" href="/victor-resume.pdf" download>
           <MdFileDownload class="group-hover:animate-bounce" /> My resume
         </a>
       </div>
@@ -97,7 +97,7 @@ onMounted(() => {
 }
 
 .about-me {
-  @apply gap-5 flex flex-col md:flex-row items-center lg:gap-x-14;
+  @apply gap-5 flex flex-col md:flex-row items-center lg:gap-x-14 relative z-[1];
 
   &-content {
     @apply flex flex-col gap-y-0.5 w-full md:w-[55%];

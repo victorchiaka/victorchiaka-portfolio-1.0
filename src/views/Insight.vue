@@ -10,6 +10,7 @@ import projects from "../data/projects.json";
 import works from "../data/works.json";
 import contactDetails from "../data/contact-details.json";
 import { Category } from "../types";
+import { AkLinkChain, ThGithub } from '@kalimahapps/vue-icons';
 
 const technologies: Category[] = technologyData;
 </script>
@@ -145,7 +146,7 @@ const technologies: Category[] = technologyData;
 
 <style scoped lang="scss">
 .insights {
-  @apply min-h-dvh flex flex-col-reverse md:flex-col items-center justify-center p-2 w-[95%] mx-auto;
+  @apply min-h-dvh flex flex-col-reverse md:flex-col items-center justify-center p-2 w-[95%] mx-auto z-[1];
 
   .my-technologies {
     @apply md:min-h-[70vh] flex w-full flex-col md:flex-row items-start md:items-center md:justify-between md:w-full my-5 md:my-0;
@@ -188,7 +189,7 @@ const technologies: Category[] = technologyData;
 }
 
 .contact-section {
-  @apply my-8 flex items-center justify-center p-2 w-[95%] mx-auto;
+  @apply my-8 flex items-center justify-center p-2 w-[95%] mx-auto z-[1];
 
   .contact-me {
     @apply w-full gap-5 flex flex-col md:flex-row items-center lg:gap-x-14;
