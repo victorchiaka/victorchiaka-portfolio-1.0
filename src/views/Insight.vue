@@ -10,7 +10,7 @@ import projects from "../data/projects.json";
 import works from "../data/works.json";
 import contactDetails from "../data/contact-details.json";
 import { Category } from "../types";
-import { AkLinkChain, ThGithub } from '@kalimahapps/vue-icons';
+import { AkLinkChain, ThGithub } from "@kalimahapps/vue-icons";
 
 const technologies: Category[] = technologyData;
 </script>
@@ -28,11 +28,7 @@ const technologies: Category[] = technologyData;
           >
             My Technologies
           </h2>
-          <div
-            v-for="(category, key) in technologies"
-            class="py-2 w-full"
-            :key="key"
-          >
+          <div v-for="(category, key) in technologies" class="py-2 w-full" :key="key">
             <Accordion :category="category" />
           </div>
         </div>
@@ -40,16 +36,10 @@ const technologies: Category[] = technologyData;
     </div>
     <div class="works-and-projects" id="works-and-projects">
       <div class="projects">
-        <h2
-          class="font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3"
-        >
+        <h2 class="font-bold font-comfortaa text-lg md:text-xl lg:text-2xl mb-1 md:mb-3">
           Projects
         </h2>
-        <div
-          v-for="(project, key) in projects"
-          :key="key"
-          class="w-full flex py-1"
-        >
+        <div v-for="(project, key) in projects" :key="key" class="w-full flex py-1">
           <div class="w-[2px] gap-y-2 flex flex-col items-center mr-3">
             <div class="bg-gray-400/30 h-[10%] w-[2px] rounded-md"></div>
             <div class="bg-gray-400/30 h-[6px] w-[6px] rounded-full"></div>
@@ -78,22 +68,14 @@ const technologies: Category[] = technologyData;
         <div
           class="w-full flex flex-col items-center gap-y-3 h-fit md:h-full overflow-y-scroll works-scroll"
         >
-          <div
-            class="w-full flex md:block"
-            v-for="(work, key) in works"
-            :key="key"
-          >
-            <div
-              class="w-[6px] gap-y-2 flex flex-col items-center mr-3 md:hidden"
-            >
+          <div class="w-full flex md:block" v-for="(work, key) in works" :key="key">
+            <div class="w-[6px] gap-y-2 flex flex-col items-center mr-3 md:hidden">
               <div class="bg-gray-400/30 h-[10%] w-[2px] rounded-md"></div>
               <div class="bg-gray-400/30 h-[6px] w-[6px] rounded-full"></div>
               <div class="bg-gray-400/30 h-[80%] w-[2px] rounded-md"></div>
             </div>
             <div class="w-[95%] md:w-full">
-              <div
-                class="text-xxs w-[100%] py-2 h-56 rounded-md bg-gray-500/20"
-              >
+              <div class="text-xxs w-[100%] py-2 h-56 rounded-md bg-gray-500/20">
                 <p class="text-center pb-1">{{ work.position }}</p>
                 <WorkCard :workCard="work" />
               </div>
@@ -122,11 +104,7 @@ const technologies: Category[] = technologyData;
             />
           </h2>
           <div class="grid grid-cols-2 place-items-center gap-3">
-            <div
-              v-for="(contactDetail, key) in contactDetails"
-              class="w-full"
-              :key="key"
-            >
+            <div v-for="(contactDetail, key) in contactDetails" class="w-full" :key="key">
               <ContactDetailCard :contactDetail="contactDetail" />
             </div>
           </div>

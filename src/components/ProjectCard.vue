@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  BxPython,
-  AkNextjsFill,
-  SiCsharp,
-  SiTailwindcss,
-} from "@kalimahapps/vue-icons";
+import { BxPython, AkNextjsFill, SiCsharp, SiTailwindcss } from "@kalimahapps/vue-icons";
 import { computed } from "vue";
 import { Project } from "../types";
 
@@ -22,11 +17,17 @@ const iconsMap = {
 const props = defineProps<ProjectProps>();
 
 const iconComponent = computed(() => {
-  return iconsMap[props.project.icon as unknown as keyof typeof iconsMap];
+  return iconsMap[(props.project.icon as unknown) as keyof typeof iconsMap];
 });
 </script>
 <template>
-  <a class="project-card group" :href="project.githubLink">
+  <component
+    :is="project.link ? 'a' : 'div'"
+    class="project-card group"
+    :href="project.link || undefined"
+    :target="project.link ? '_blank' : undefined"
+    :rel="project.link ? 'noopener noreferrer' : undefined"
+  >
     <div class="project-card-top">
       {{ project.name }}
       <component
@@ -41,8 +42,9 @@ const iconComponent = computed(() => {
         <p>{{ project.type }}</p>
       </div>
     </div>
-  </a>
+  </component>
 </template>
+
 <style scoped lang="scss">
 .project-card {
   @apply rounded-md bg-gray-400/30 dark:bg-navy-blue/90 backdrop-blur-sm shadow-sm w-full py-3 px-4 h-fit flex flex-col justify-between gap-y-3 cursor-pointer;

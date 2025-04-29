@@ -19,6 +19,6 @@ export type Project = {
   name: string;
   type: string;
   description: string;
-  githubLink: string;
+  link?: string;
   icon: string;
 };

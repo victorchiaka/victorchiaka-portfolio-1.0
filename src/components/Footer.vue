@@ -4,7 +4,9 @@ const year = new Date().getFullYear();
 <template>
   <footer>
     <h3 class="font-bold text-lg">Victor Chiaka</h3>
-    <small class="text-xxs">&copy; 2024 - {{ year }} Victor Chiaka, All rights reserved.</small>
+    <small class="text-xxs"
+      >&copy; 2024 - {{ year }} Victor Chiaka, All rights reserved.</small
+    >
   </footer>
 </template>
 <style scoped lang="scss">

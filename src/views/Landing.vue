@@ -69,14 +69,22 @@ onMounted(() => {
 <template>
   <section id="about" class="about">
     <div class="about-me">
-      <img src="/images/chiaka-logo.svg" id="main-logo" alt="Victor Chiaka's logo" class="about-me-image" />
+      <img
+        src="/images/chiaka-logo.svg"
+        id="main-logo"
+        alt="Victor Chiaka's logo"
+        class="about-me-image"
+      />
       <div class="about-content text-center lg:text-left">
         <h2
-          class="h-[1.5rem] text-sm md:text-base font-bold dark:text-blue-green text-navy-blue uppercase md:-mb-2 md:ml-0.5 font-ubuntu-mono opacity-0 animate-slide-in-right">
+          class="h-[1.5rem] text-sm md:text-base font-bold dark:text-blue-green text-navy-blue uppercase md:-mb-2 md:ml-0.5 font-ubuntu-mono opacity-0 animate-slide-in-right"
+        >
           {{ displayText }}
           <span :class="isBlinking ? 'animate-blink' : ''">|</span>
         </h2>
-        <h1 class="text-[clamp(20px,4vh,75px)] font-bold mb-2 dark:text-white opacity-0 animate-slide-in-bottom">
+        <h1
+          class="text-[clamp(20px,4vh,75px)] font-bold mb-2 dark:text-white opacity-0 animate-slide-in-bottom"
+        >
           FullStack Software Engineer
         </h1>
         <p class="font-asap text-sm opacity-0 animate-slide-in-bottom">
@@ -84,7 +92,11 @@ onMounted(() => {
           high-performance apps, scalable, systems & enterprise backend services. I
           transform ideas into efficient digital solutions. Let’s collaborate!!!.
         </p>
-        <a class="download-resume group opacity-0 animate-slide-in-bottom" href="/victor-resume.pdf" download>
+        <a
+          class="download-resume group opacity-0 animate-slide-in-bottom"
+          href="/victor-resume.pdf"
+          download
+        >
           <MdFileDownload class="group-hover:animate-bounce" /> My resume
         </a>
       </div>

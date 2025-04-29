@@ -3,35 +3,42 @@
     "name": "Schoolwave",
     "type": "Fullstack",
     "description": "An application to manage the activities of schools that registeres under us",
-    "githubLink": "https://github.com/innovarIdeas/schoolwave-0.2",
+    "link": "https://schoolwave.ng/",
     "icon": "NextJs"
   },
   {
     "name": "Wemoov",
     "type": "Fullstack",
     "description": "A classic application for a big time logistic business",
-    "githubLink": "https://github.com/litestack-hq/wemoov-ui",
+    "link": "https://wemoov.ng/",
+    "icon": "NextJs"
+  },
+  {
+    "name": "Lightstack HQ",
+    "type": "Frontend",
+    "description": "Litestack's Website",
+    "link": "https://lshq.io/",
     "icon": "NextJs"
   },
   {
     "name": "Manage website",
     "type": "Frontend",
     "description": "Frontend mentor's manage website challenge",
-    "githubLink": "https://github.com/victorchiaka/manage-tailwind",
+    "link": "https://github.com/victorchiaka/manage-tailwind",
     "icon": "Tailwind"
   },
   {
     "name": "User management system",
     "type": "Backend",
     "description": "A backend User management system with C# and Gherkin",
-    "githubLink": "https://github.com/victorchiaka/user-management-system",
+    "link": "https://github.com/victorchiaka/user-management-system",
     "icon": "CSharp"
   },
 {
     "name": "Webnotes",
     "type": "Fullstack",
     "description": "A fullstack note taking application for the web",
-    "githubLink": "https://github.com/victorchiaka/user-management-system",
+    "link": "https://github.com/victorchiaka/user-management-system",
     "icon": "Python"
   }
 ]
