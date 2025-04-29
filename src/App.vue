@@ -39,7 +39,7 @@ const observeLogoTouch = () => {
     },
     {
       threshold: 0.9,
-    },
+    }
   );
 
   observer.observe(mainLogo as Element);
@@ -73,7 +73,12 @@ onMounted(() => {
 
 <template>
   <main class="main">
-    <Navbar id="navbar" :classes="'hidden'" :theme="theme" :handleToggleTheme="handleToggleTheme" />
+    <Navbar
+      id="navbar"
+      :classes="'hidden'"
+      :theme="theme"
+      :handleToggleTheme="handleToggleTheme"
+    />
     <div class="contents">
       <Landing />
       <Insight />
@@ -82,8 +87,11 @@ onMounted(() => {
   </main>
   <div class="fixed bottom-0 right-0 w-full h-fit z-[3]">
     <div id="theme-switcher" class="container w-[95%] md:w-[90%] mx-auto relative">
-      <ThemeSwitcher @toggle-theme="handleToggleTheme" :theme="theme"
-        :classes="'opacity-0 translate-y-[100%] animate-slide-down-to-bottom absolute right-4 bottom-4 p-3'" />
+      <ThemeSwitcher
+        @toggle-theme="handleToggleTheme"
+        :theme="theme"
+        :classes="'opacity-0 translate-y-[100%] animate-slide-down-to-bottom absolute right-4 bottom-4 p-3'"
+      />
     </div>
   </div>
   <div class="glass-display" />
@@ -95,7 +103,6 @@ onMounted(() => {
 }
 
 .glass-display {
-
   &::after,
   &::before {
     content: "";

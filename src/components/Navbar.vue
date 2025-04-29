@@ -43,24 +43,15 @@ const scrollToContact = () => {
   if (!contactMe) return;
   contactMe.scrollIntoView({ behavior: "smooth" });
 };
-
 </script>
 <template>
   <nav :class="['navbar-glass', classes]" :id="id">
     <div class="flex items-center gap-1 cursor-pointer">
-      <img
-        src="/images/chiaka-logo.svg"
-        alt="Victor's logo"
-        class="w-6 h-6"
-      />
+      <img src="/images/chiaka-logo.svg" alt="Victor's logo" class="w-6 h-6" />
       <h4 class="navbar-header">Victor Chiaka</h4>
     </div>
     <ul class="navbar-list">
-      <ThemeSwitcher
-        @toggle-theme="handleToggleTheme"
-        :theme="theme"
-        classes="p-2"
-      />
+      <ThemeSwitcher @toggle-theme="handleToggleTheme" :theme="theme" classes="p-2" />
       |
       <li @click="scrollToAbout">About me</li>
       <li @click="scrollToWorks">Works</li>

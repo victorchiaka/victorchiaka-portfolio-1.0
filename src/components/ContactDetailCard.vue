@@ -22,7 +22,9 @@ const iconsMap = {
 const props = defineProps<ContactDetailsProps>();
 
 const iconComponent = computed(() => {
-  return iconsMap[props.contactDetail.socialMediaIcon as unknown as keyof typeof iconsMap];
+  return iconsMap[
+    (props.contactDetail.socialMediaIcon as unknown) as keyof typeof iconsMap
+  ];
 });
 </script>
 <template>
